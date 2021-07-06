@@ -1,0 +1,42 @@
+{% extends 'converter/base.html' %}
+{% block content1 %}
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Online Unit Converter</h1>
+    <button type="button" onclick="nextPage()" class="convertBtn">Convert Now</button>
+  </div>
+</div>
+
+<div class="flex-container">  
+  <div class="1">
+    {% for data in datas %}
+    <h3>{{ data.caption }}</h3>
+    <ul class="unitText">
+      <li>{{ data.op1 }}</li>
+      <li> {{ data.op2 }}</li>
+      <li>{{ data.op3 }}</li>
+      <li>{{ data.op4 }}</li>
+    </ul>
+    {% endfor %}
+  </div>
+  <div class="2">
+    <h3>Contact the developer</h3>
+    {% for data in datas %}
+    <p class="unitText">Name :  {{ data.name }}</p>
+    <p class="unitText">Mail :  {{ data.email }}</p>
+    {% endfor %}
+  </div>
+  <div class="androidImage">
+    <h3>Upcoming Updates</h3>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+function nextPage(e){
+  window.location="convertPage/"
+}
+</script>
+
+{% endblock content1 %}

@@ -1,0 +1,123 @@
+{% extends 'converter/base.html' %}
+{% block content1 %}
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Online Unit Converter</h1>
+    <div class="result">
+      <p>Result</p>
+      <p id="result" name="result"></p>
+      <div class="clearbtn">
+        <button type="button" onclick="clearBtn()" class="clearBtn">Clear</button>
+      </div>
+    </div>
+  </div>
+  <button type="button" onclick="homePage()">Home</button>
+</div>
+
+<div class="flex-container">  
+  <div class="1">
+    <label for="">kg to lbs</label>
+    <button type="button" onclick="convertToLbs()">Convert</button>
+   
+  </div>
+  <div class="2">
+    <label for="">lbs to kg</label>
+    <button type="button" onclick="convertToKg()">Convert</button>
+  </div>
+  <div class="3">
+    <label for="">Dollar to TK</label>
+    <button type="button" onclick="convertToTk()">Convert</button>
+  </div>
+  <div class="4">
+    <label for="">TK to DOllar</label>
+    <button type="button" onclick="convertToDollar()">Convert</button>
+  </div>
+</div>
+<div class="flex-container2">  
+<div class="5">
+  <label for="">celsius to fahrenheit</label>
+  <button type="button" onclick="convertToFarenheit()">Convert</button>
+ 
+</div>
+<div class="6">
+  <label for="">fahrenheit to celsius</label>
+  <button type="button" onclick="convertToCelsius()">Convert</button>
+</div>
+<div class="7">
+  <label for="">degree to radiun</label>
+  <button type="button" onclick="convertToRadiun()">Convert</button>
+</div>
+<div class="8">
+  <label for="">radiun to degree</label>
+  <button type="button" onclick="convertToDegree()">Convert</button>
+</div>
+</div>
+
+<script type="text/javascript">
+function convertToLbs(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 2.20462;
+  document.getElementById('result').innerHTML = n +  "   lbs";
+}
+function convertToKg(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 0.453592;
+ document.getElementById('result').innerHTML = n +  "   kg";
+}
+function convertToTk(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 84.76;
+ document.getElementById('result').innerHTML = n  +  "   TK";
+}
+function convertToDollar(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 0.012;
+ document.getElementById('result').innerHTML = n +  "   USD";
+}
+function convertToCelsius(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n - 32;
+  n = n / 1.8;
+ document.getElementById('result').innerHTML = n +  "   °C";
+}
+function convertToFarenheit(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 1.8;
+  n = n + 32;
+ document.getElementById('result').innerHTML = n +  "   °F";
+}
+function convertToRadiun(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n / 57.2958;
+ document.getElementById('result').innerHTML = n  +  "   rad";
+}
+function convertToDegree(e){
+  let x = prompt("Enter number");
+  let n = Number(x);
+
+  n = n * 57.2958;
+ document.getElementById('result').innerHTML = n +  "   deg";
+}
+
+function clearBtn(e){
+  document.getElementById('result').innerHTML = "";
+}
+function homePage(e){
+  window.location="../"
+}
+</script>
+{% endblock content1 %}

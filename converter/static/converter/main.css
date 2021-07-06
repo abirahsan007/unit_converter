@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+}
+
+.hero-image {
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url("img1.png");
+
+ 
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.hero-text button{
+    padding: 10px;
+    margin: 1px;
+    font-family: Cambria;
+}
+
+.convertBtn:hover{
+    color: red;
+    background-color: black;
+}
+.clearBtn:hover{
+  color: red;
+  background-color: black;
+}
+.flex-container {
+    display: flex;
+    background-color: grey;
+  }
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 40px;
+    padding: 20px;
+    font-size: 30px;
+  }  
+
+.unitText{
+    font-size: 20px;
+}
+
+.result {
+  background-color: whitesmoke;
+ 
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.flex-container2 {
+  display: flex;
+  background-color: grey;
+}
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  margin: 40px;
+  padding: 20px;
+  font-size: 30px;
+}  
+
+.androidImage {
+  background-image: url("img2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex-container3 {
+  display: flex;
+  background-color: black;
+}
+.flex-container2 > div {
+  margin: 40px;
+  padding: 20px;
+  font-size: 30px;
+}  
+
+#footer{
+  height: 400px;
+  width: 400px;
+}
